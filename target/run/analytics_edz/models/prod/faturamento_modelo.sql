@@ -1,5 +1,10 @@
 
-with dw_faturamento_model as (
+  
+    
+
+  create  table "coins"."public"."faturamento_modelo__dbt_tmp"
+  as (
+    with faturamento_model as (
 
     select pro.model as "Model"
           ,sum(pro.price) as "Faturamento"
@@ -10,4 +15,6 @@ with dw_faturamento_model as (
 
 )
 
-select * from dw_faturamento_model
+select * from faturamento_model
+  );
+  

@@ -1,5 +1,10 @@
 
-with dw_faturamento_ano as (
+  
+    
+
+  create  table "coins"."public"."faturamento_ano__dbt_tmp"
+  as (
+    with faturamento_ano as (
 
     select DATE_PART('year', purchased_at ) AS "Ano"
         ,sum(ap.price) as "Faturameto"
@@ -11,4 +16,6 @@ with dw_faturamento_ano as (
 )
 
 
-select * from dw_faturamento_ano
+select * from faturamento_ano
+  );
+  
