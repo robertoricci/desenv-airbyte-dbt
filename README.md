@@ -1,1 +1,1 @@
-Projeto Airbyte + DBT - Engenharia de Dados do Zero.
+Projeto Airbyte + DBT
