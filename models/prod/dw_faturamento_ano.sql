@@ -1,7 +1,7 @@
 
 with dw_faturamento_ano as (
 
-    select YEAR( purchased_at ) AS "Ano"
+    select DATE_PART('year', purchased_at ) AS "Ano"
         ,sum(ap.price) as "Faturameto"
     from dbt.purchases pur inner join dbt.products ap
     on pur.product_id = ap.id
