@@ -3,7 +3,7 @@ with dw_faturamento_ano as (
 
     select YEAR( purchased_at ) AS "Ano"
         ,sum(ap.price) as "Faturameto"
-    from desenv.airbyte_purchases pur inner join desenv.airbyte_products ap
+    from dbt.airbyte_purchases pur inner join dbt.airbyte_products ap
     on pur.product_id = ap.id
     group by 1
     order by 1
